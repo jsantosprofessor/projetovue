@@ -26,17 +26,17 @@ export default {
         {
           title: 'Estratégias Avançadas',
           description: 'Descubra técnicas avançadas para otimizar suas campanhas.',
-          image: 'https://via.placeholder.com/150'
+          image: 'https://plus.unsplash.com/premium_photo-1742202420319-e933c71d4495?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/'
         },
         {
           title: 'Ferramentas Essenciais',
           description: 'Conheça as ferramentas indispensáveis para o marketing digital.',
-          image: 'https://via.placeholder.com/150'
+          image: 'https://images.unsplash.com/photo-1742855751015-5bda25456249?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         },
         {
           title: 'Suporte 24/7',
           description: 'Receba suporte contínuo para todas as suas dúvidas.',
-          image: '@/assets/picture.jpg'
+          image: 'https://images.unsplash.com/photo-1742943679521-f4736500a471?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         }
       ]
     };
