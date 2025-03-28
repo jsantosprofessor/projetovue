@@ -1,58 +1,105 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="landing-page">
+    <div class="hero">
+      <h1>{{ title }}</h1>
+      <p>{{ description }}</p>
+      <button @click="buyProduct">Comprar Agora</button>
+    </div>
+    <div class="features">
+      <div class="feature" v-for="(feature, index) in features" :key="index">
+        <img :src="feature.image" :alt="feature.title">
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String
+  data() {
+    return {
+      title: 'Produto de Marketing Digital',
+      description: 'Aprenda as melhores estratégias de marketing digital com nosso curso completo.',
+      features: [
+        {
+          title: 'Estratégias Avançadas',
+          description: 'Descubra técnicas avançadas para otimizar suas campanhas.',
+          image: 'https://via.placeholder.com/150'
+        },
+        {
+          title: 'Ferramentas Essenciais',
+          description: 'Conheça as ferramentas indispensáveis para o marketing digital.',
+          image: 'https://via.placeholder.com/150'
+        },
+        {
+          title: 'Suporte 24/7',
+          description: 'Receba suporte contínuo para todas as suas dúvidas.',
+          image: '@/assets/picture.jpg'
+        }
+      ]
+    };
+  },
+  methods: {
+    buyProduct() {
+      alert('Produto comprado!');
+    }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.landing-page {
+  text-align: center;
+  background: url('@/assets/picture.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  padding: 50px 0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.hero {
+  animation: fadeIn 2s ease-in-out;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
-a {
-  color: #42b983;
+
+.feature {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 300px;
+  animation: slideIn 1s ease-in-out;
+}
+
+.feature img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 </style>
