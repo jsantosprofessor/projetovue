@@ -31,6 +31,7 @@
     align-items: center;
     height: 100vh;
     background-color: #f5f5f5;
+    margin: 100px;
   }
   
   .content {

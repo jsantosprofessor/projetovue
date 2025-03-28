@@ -1,6 +1,6 @@
 <template>
     <header>
-      <h1>Dashboard WebCraft Solutions</h1>
+      <h1>Marketing Digital</h1>
     </header>
   </template>
   
